@@ -39,7 +39,8 @@ jobs:
         brakeman -f sarif -o output.sarif.json .
     - name: Upload SARIF report
     uses: actions/upload-artifact@v2
-      with:
-      name: sarif-report
+    with:
+    -  name: Generate SARIF report
+  run: brakeman --output output.sarif.json
       path: output.sarif.json
         
