@@ -38,9 +38,7 @@ jobs:
       run: https://github.com/presidentbeef/brakeman.git
         brakeman -f sarif -o output.sarif.json .
     - name: Upload SARIF report
-    uses: actions/upload-artifact@v2
-    with:
-    -  name: Generate SARIF report
-  run: brakeman --output output.sarif.json
-      path: output.sarif.json
-        
+      uses: actions/upload-artifact@v2
+      with:
+       name: sarif-report
+      path: output.sarif.json   
