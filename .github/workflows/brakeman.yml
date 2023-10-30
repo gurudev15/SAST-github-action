@@ -42,4 +42,7 @@ jobs:
       with:
        name: sarif-report
        path: output.sarif.json
+       runs-on: ubuntu-latest
+           
+ 
       
